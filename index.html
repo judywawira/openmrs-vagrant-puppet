@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>OpenMRS powered Interventional Radiology Registry System by judywawira</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">OpenMRS powered Interventional Radiology Registry System</h1>
+        <p class="header">Write code, save lives!</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/judywawira/openmrs-vagrant-puppet/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/judywawira/openmrs-vagrant-puppet/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/judywawira/openmrs-vagrant-puppet">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/judywawira">judywawira</a></p>
+
+
+      </header>
+      <section>
+        <h1>
+<a id="radiology-openmrs-research-repository" class="anchor" href="#radiology-openmrs-research-repository" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Radiology OpenMRS research repository</h1>
+
+<h1>
+<a id="description" class="anchor" href="#description" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Description</h1>
+
+<p>The purpose of this server is to provide a mechanism for sophisticated research data collection and analysis beyond the capabilities provided by RedCap and other CTSI tools.</p>
+
+<h1>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h1>
+
+<ol>
+<li>Vagrant : <a href="https://www.vagrantup.com/downloads.html">https://www.vagrantup.com/downloads.html</a>
+</li>
+<li>VirtualBox : <a href="https://www.virtualbox.org/wiki/Downloads">https://www.virtualbox.org/wiki/Downloads</a>
+</li>
+<li>Git : <a href="http://git-scm.com/downloads">http://git-scm.com/downloads</a>
+</li>
+</ol>
+
+<h1>
+<a id="setup---one-time" class="anchor" href="#setup---one-time" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Setup - One time</h1>
+
+<ol>
+<li><p>Ensure you have the applications specified in the <b>Requirements </b> section installed </p></li>
+<li><p>Clone the repository into a local directory using the following command </p></li>
+</ol>
+
+<pre><code>git clone https://github.com/shadowdoc/openmrs-puppet-vagrant.git
+</code></pre>
+
+<ol>
+<li>Change into the openmrs directory and run the following vagrant command to set up your instance</li>
+</ol>
+
+<pre><code>vagrant up
+</code></pre>
+
+<p>You will get a notice similar to the one below once vagrant is done running successfully</p>
+
+<pre><code>==&gt; default: Notice: Finished catalog run in 354.92 seconds
+</code></pre>
+
+<p>After vagrant has finished running, you are ready  to run the openmrs system. Point your browser to the link 
+http://localhost:8080/openmrs/</p>
+
+<p>You will be directed to the login page. To access the account use these credentials <b>  username: admin <b></b> and <b> password: Admin123 </b></b></p>
+
+<p><img src="https://github.com/shadowdoc/openmrs-vagrant-puppet/raw/master/images/login.png" alt="alt tag"></p>
+
+<h1>
+<a id="form-creation" class="anchor" href="#form-creation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Form Creation</h1>
+
+<p>Read on the OpenMRS forms schema here to get started working on your own forms </p>
+
+<p><a href="https://wiki.openmrs.org/display/docs/Administering+Forms">https://wiki.openmrs.org/display/docs/Administering+Forms</a></p>
+
+<p>Xforms is our preferred method of displaying and editing forms.  </p>
+
+<p>Refer to this guide : <a href="https://wiki.openmrs.org/display/docs/XForms+Module+User+Guide">https://wiki.openmrs.org/display/docs/XForms+Module+User+Guide</a></p>
+
+<p><a href="https://wiki.openmrs.org/display/docs/XForms+Module+Form+Designer">https://wiki.openmrs.org/display/docs/XForms+Module+Form+Designer</a></p>
+
+<p>Video on xforms : <a href="http://connect.iu.edu/p4gxh601oxv/">http://connect.iu.edu/p4gxh601oxv/</a></p>
+
+<h1>
+<a id="exporting-forms" class="anchor" href="#exporting-forms" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Exporting Forms</h1>
+
+<p><a href="https://wiki.openmrs.org/display/docs/User%27s+Guide+for+Metadata+Sharing+Module">https://wiki.openmrs.org/display/docs/User%27s+Guide+for+Metadata+Sharing+Module</a></p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>

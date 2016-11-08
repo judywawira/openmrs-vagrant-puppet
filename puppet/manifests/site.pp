@@ -48,7 +48,7 @@ tomcat::instance{ 'default':
   package_name => 'tomcat',
   require =>  [
                 Mysql::Db["openmrs"],
-                File['/var/lib/OpenMRS/openmrs-runtime.properties'],
+                File['/var/lib/OpenMRS/lh-toolkit-runtime.properties'],
                 File['/var/lib/OpenMRS/tomcat-keystore']
               ]
 }->
@@ -76,7 +76,7 @@ tomcat::config::server::connector { 'tomcat-https':
 }->
 tomcat::war { 'openmrs.war':
   catalina_base => '/usr/share/tomcat/',
-  war_source => '/vagrant/openmrs-platform-1.10.1.war',
+  war_source => 'https://gitlab.com/librehealth/lh-toolkit/tree/master/webapp',
 }->
 
 # Chain of firewall commands for tomcat
@@ -105,7 +105,7 @@ file { ["/var/lib/OpenMRS"]:
     mode   => 750,
     owner => tomcat,
     group => root,
-    #source => "/vagrant/openmrs-runtime.properties",
+    #source => "/vagrant/lh-toolkit-runtime.properties",
 }->
 file { ["/var/lib/OpenMRS/modules"]:
     ensure => "directory",
@@ -115,7 +115,7 @@ file { ["/var/lib/OpenMRS/modules"]:
     source => "/vagrant/omods/",
     recurse => true
 }->
-file { '/var/lib/OpenMRS/openmrs-runtime.properties':
+file { '/var/lib/OpenMRS/lh-toolkit-runtime.properties':
           ensure => present,
           source => "/vagrant/openmrs-runtime.properties",
           mode   => 750,

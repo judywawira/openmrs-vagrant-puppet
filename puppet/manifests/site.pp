@@ -74,9 +74,9 @@ tomcat::config::server::connector { 'tomcat-https':
     'ciphers' => 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA256,TLS_RSA_WITH_AES_256_CBC_SHA'
   },
 }->
-tomcat::war { 'openmrs.war':
+tomcat::war { 'lh-toolkit.war':
   catalina_base => '/usr/share/tomcat/',
-  war_source => '/vagrant/openmrs.war',
+  war_source => '/vagrant/lh-toolkit.war',
 }->
 
 # Chain of firewall commands for tomcat

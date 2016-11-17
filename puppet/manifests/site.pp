@@ -76,7 +76,7 @@ tomcat::config::server::connector { 'tomcat-https':
 }->
 tomcat::war { 'openmrs.war':
   catalina_base => '/usr/share/tomcat/',
-  war_source => 'https://gitlab.com/librehealth/lh-toolkit/tree/master/webapp',
+  war_source => '/vagrant/openmrs.war',
 }->
 
 # Chain of firewall commands for tomcat
@@ -117,7 +117,7 @@ file { ["/var/lib/OpenMRS/modules"]:
 }->
 file { '/var/lib/OpenMRS/lh-toolkit-runtime.properties':
           ensure => present,
-          source => "/vagrant/openmrs-runtime.properties",
+          source => "/vagrant/lh-toolkit-runtime.properties",
           mode   => 750,
           owner => tomcat,
           group => root,
